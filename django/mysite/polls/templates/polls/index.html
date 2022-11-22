@@ -1,0 +1,19 @@
+{% extends "polls/base.html" %}
+
+
+{% block content %}
+<h1>Đây Là Một Templates</h1>
+<p><b>name : {{name}}</b></p>
+<p><b>age : {{age}}</b></p>
+<p><b>address : {{address}}</b></p>
+<p><b>phone : {{phone}}</b></p>
+<ul>
+    {% for item in courses %}
+        {% if item != 'HTML' %}
+            <li>{{item}}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endblock content %}
+
+

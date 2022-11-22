@@ -1,0 +1,10 @@
+{% extends "myclass/base.html" %}
+
+{% block class3 %}
+    <h3>Student class3</h3>
+    <ul>
+    {% for item in list_class3 %}
+        <li>{{item}}</li>
+    {% endfor %}
+    </ul>
+{% endblock class3 %}   

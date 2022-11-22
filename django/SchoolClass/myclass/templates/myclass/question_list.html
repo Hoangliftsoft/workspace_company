@@ -1,0 +1,16 @@
+{% extends "myclass/base.html" %}
+
+
+{% block question_list %}
+<ul>
+{% if question_list %}
+    {% for item in question_list %}
+        <a href="{% url 'myclass:detailView' item.id %}"><p><li>{{item.question_text}}</li></p></a>
+    {% endfor %}
+{% else %}
+    <h4>Không có dữ liệu question</h4>
+{% endif %}
+
+</ul>
+
+{% endblock question_list %}

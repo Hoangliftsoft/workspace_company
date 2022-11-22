@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myclass/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>STUDENT</h1>
+    <p>--------</p>  
+    <p>--------</p>
+    <p>--------</p>
+    <br><br><br><br>
+    {% block class1 %}
+    {% endblock class1 %}
+
+    {% block class2 %}
+    {% endblock class2 %}
+
+    {% block class3 %}
+    {% endblock class3 %}
+
+    {% block class4 %}
+    {% endblock class4 %}
+    
+    {% block question_list %}
+    
+    {% endblock question_list %}
+    
+    {% block detail_view %}
+    
+    {% endblock detail_view %}
+
+    {% block result %}
+    
+    {% endblock result %}
+</body>
+</html>

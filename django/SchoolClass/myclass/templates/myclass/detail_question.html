@@ -1,0 +1,18 @@
+{% extends "myclass/base.html" %}
+
+{% block detail_view %}
+
+    {% if detail_list %}
+    <h1>{{detail_list.question_text}}</h1>
+    <form action="{% url 'myclass:vote' detail_list.id %}" method="post">
+        {% csrf_token %} 
+        <ul>
+            {% for item in detail_list.choice_set.all %}
+                <li><input type="radio" value="{{item.id}}" name="choice">{{item.choice_text}}</li>
+            {% endfor %}
+            <p><input type="submit" value="Gửi"></p>
+        </ul>
+    </form>
+    {% endif %}
+
+{% endblock detail_view %}
